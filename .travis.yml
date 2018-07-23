@@ -3,11 +3,8 @@ language: python
 python:
   - "3.6"
 
-script:
-  - cd voting
-
 install:
-  - pip install -r requirements.txt
+  - pip install -r voting/requirements.txt
   
 script:
-  - python manage.py test
+  - python voting/manage.py test
