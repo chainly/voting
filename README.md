@@ -1,5 +1,4 @@
-# voting
-[![https://travis-ci.com/chainly/voting.svg?branch=master]][travis]
+# voting ![travis-ci](https://travis-ci.com/chainly/voting.svg?branch=master)
 simple voting application
 
 # Project Description
