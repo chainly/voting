@@ -1,0 +1,37 @@
+{% load staticfiles %}
+ 
+{% if user %}
+  <li><a href="#">{{ user }} <span class="glyphicon glyphicon-user"></a></li>
+  <li><a href="{% url 'admin:logout' %}">logout</a></li>
+{% else %}
+  <li><a href="{% url 'admin:login' %}">login</a></li>
+{% endif %}
+
+<br>msg<br>
+<textarea id="msg" width=200 >{{ msg }}</textarea>
+
+<br>question</br>
+<textarea id="question">{{ question.content }}</textarea>
+
+<form action='#' method="post">answer</div>
+
+{% if last_vote %}
+<pre>This is your last vote!</pre>
+{% else %}
+<pre>vote one!</pre>
+{% endif%}
+
+{% csrf_token %}
+
+{% for option in answer %}
+  {% if last_vote and option.content == last_vote %}
+    <li><input name="answer" type="radio" checked="checked" value="{{ option.id }}"/>{{ option.content }}</li>
+  {% else %}
+     <li><input name="answer" type="radio" value="{{ option.id }}"/>{{ option.content }}</li>
+  {% endif %}
+{% endfor %}
+
+<input type="submit" value="Submit" />
+</div>
+
+</script>
