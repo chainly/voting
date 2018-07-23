@@ -4,7 +4,7 @@ python:
   - "3.6"
 
 install:
-  - pip install -r voting/requirements.txt
+  - pip install -r ./voting/requriments.txt
   
 script:
-  - python voting/manage.py test
+  - python ./voting/manage.py test
