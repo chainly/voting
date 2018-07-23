@@ -1,4 +1,5 @@
 # voting
+[![https://travis-ci.com/chainly/voting.svg?branch=master]][travis]
 simple voting application
 
 # Project Description
@@ -31,3 +32,17 @@ Things to keep in mind:
 
 Good luck!!
 ```
+
+# Usage
+- install: `pip install -r ./voting/requriments.txt`
+- test: `python ./voting/manage.py test`
+- createsuperuser: `python ./voting/manage.py createsuperuser`
+- runserver: `python ./voting/manage.py runserver`
+- about user: log in admin (http://127.0.0.1:8000/accounts/)
+- about data: http://127.0.0.1:8000/api/
+- aboot vote: http://127.0.0.1:8000/web/vote
+
+# TODO
+- cache api
+- mysql transaction
+- ajax
